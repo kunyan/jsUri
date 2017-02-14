@@ -452,6 +452,8 @@
     });
   } else if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
     module.exports = Uri;
+    // es6 default export compatibility
+    module.exports.default = module.exports;
   } else {
     global.Uri = Uri;
   }
